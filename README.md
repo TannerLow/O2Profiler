@@ -15,7 +15,9 @@ pip install -r requirements.txt
 conan remote add <unique_remote_name> https://gitlab.com/api/v4/projects/76111843/packages/conan
 ```
 
-Create a `conanfile.txt` file with these contents in the same location as your .sln file
+---
+
+* Create a `conanfile.txt` file with these contents in the same location as your .sln file
 ```
 [requires]
 o2profiler/0.1.0
@@ -25,14 +27,18 @@ MSBuildDeps
 MSBuildToolchain
 ```
 
-Run these commands to install the packages listed in the `conanfile.txt`
+---
+
+* Run these commands to install the packages listed in the `conanfile.txt`
 ```
 conan install . --output-folder=build -s build_type=Debug   -s arch=x86_64 -s compiler.cppstd=17
 
 conan install . --output-folder=build -s build_type=Release -s arch=x86_64 -s compiler.cppstd=17
 ```
 
-Create a `Directory.Build.props` file with these contents in the same location as your .sln
+---
+
+* Create a `Directory.Build.props` file with these contents in the same location as your .sln
 ```
 <Project>
   <PropertyGroup>
