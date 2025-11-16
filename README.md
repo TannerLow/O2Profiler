@@ -57,5 +57,5 @@ conan install . --output-folder=build -s build_type=Release -s arch=x86_64 -s co
 ## For Maintainer Use Only
 Command to upload new versions to package repository
 ```
-conan upload o2profiler/x.y.z -r gitlab
+conan upload o2profiler/x.y.z -r gitlab -c
 ```
